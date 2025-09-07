@@ -8,6 +8,7 @@ namespace API.Entities.General;
 [PrimaryKey("JobOpeningID")]
 public class JobOpening
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int JobOpeningID { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }

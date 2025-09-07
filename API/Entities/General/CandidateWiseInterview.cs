@@ -7,6 +7,7 @@ namespace API.Entities.General;
 [PrimaryKey("InterviewID")]
 public class CandidateWiseInterview
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int InterviewID { get; set; }
     public DateTime InterviewDate { get; set; }
     public string InterviewDescription { get; set; }

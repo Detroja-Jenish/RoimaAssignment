@@ -7,6 +7,7 @@ namespace API.Entities.General;
 [PrimaryKey("EmployeeID")]
 public class Employee
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int EmployeeID { get; set; }
     [Column(TypeName = "varchar(20)")]
     public string FirstName { get; set; } = null!;
@@ -23,4 +24,5 @@ public class Employee
     public int RoleID { get; set; }
     public Role Role { get; set; }
     public ICollection<InterviewWiseAuthorityFeedback> Feedbacks { get; set; }
+    public ICollection<JobOpening> JobOpenings { get; set; }
 }

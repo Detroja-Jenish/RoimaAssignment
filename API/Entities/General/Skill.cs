@@ -7,6 +7,7 @@ namespace API.Entities.General;
 [PrimaryKey("SkillID")]
 public class Skill
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int SkillID { get; set; }
     public string SkillTitle { get; set; }
     public string Description { get; set; }

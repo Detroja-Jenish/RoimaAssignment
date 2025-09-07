@@ -7,6 +7,7 @@ namespace API.Entities.General;
 [PrimaryKey("ID")]
 public class InterviewWiseAuthorityFeedback
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int ID { get; set; }
     public int InterviewerID { get; set; }
     public int InterviewID { get; set; }

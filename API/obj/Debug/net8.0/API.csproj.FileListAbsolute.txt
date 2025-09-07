@@ -1,3 +1,11 @@
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.csproj.AssemblyReference.cache
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.AssemblyInfoInputs.cache
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.AssemblyInfo.cs
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.csproj.CoreCompileInputs.cache
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.MvcApplicationPartsAssemblyInfo.cs
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.MvcApplicationPartsAssemblyInfo.cache
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.sourcelink.json
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/appsettings.Development.json
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/appsettings.json
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/API
@@ -6,6 +14,7 @@
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/API.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/API.pdb
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Humanizer.dll
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.Build.Locator.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll
@@ -28,6 +37,12 @@
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Microsoft.OpenApi.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/Mono.TextTemplating.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/MySqlConnector.dll
@@ -43,6 +58,7 @@
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/System.Composition.Runtime.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/System.Composition.TypedParts.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/System.Diagnostics.DiagnosticSource.dll
+/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/System.IO.Pipelines.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/System.Text.Encodings.Web.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/System.Text.Json.dll
@@ -112,13 +128,6 @@
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
-/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.csproj.AssemblyReference.cache
-/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.GeneratedMSBuildEditorConfig.editorconfig
-/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.AssemblyInfoInputs.cache
-/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.AssemblyInfo.cs
-/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.csproj.CoreCompileInputs.cache
-/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.MvcApplicationPartsAssemblyInfo.cs
-/Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/API.MvcApplicationPartsAssemblyInfo.cache
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/staticwebassets.build.json
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/staticwebassets.development.json
 /Users/jenishdetroja/Desktop/Roima_PRE_INTERNSHIP_ASSIGNEMNET/API/obj/Debug/net8.0/staticwebassets/msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props

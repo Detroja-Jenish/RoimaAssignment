@@ -4,7 +4,6 @@ using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -12,11 +11,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(AssignmentDbContext))]
-    [Migration("20250830114420_InitialCreate")]
-    partial class InitialCreate
+    partial class AssignmentDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -259,9 +256,6 @@ namespace API.Migrations
                     b.Property<int>("CreatedBy")
                         .HasColumnType("int");
 
-                    b.Property<int>("CreatedByEmployeeEmployeeID")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -289,7 +283,7 @@ namespace API.Migrations
 
                     b.HasKey("JobOpeningID");
 
-                    b.HasIndex("CreatedByEmployeeEmployeeID");
+                    b.HasIndex("CreatedBy");
 
                     b.ToTable("JobOpenings");
                 });
@@ -452,8 +446,8 @@ namespace API.Migrations
             modelBuilder.Entity("API.Entities.General.JobOpening", b =>
                 {
                     b.HasOne("API.Entities.General.Employee", "CreatedByEmployee")
-                        .WithMany()
-                        .HasForeignKey("CreatedByEmployeeEmployeeID")
+                        .WithMany("JobOpenings")
+                        .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -494,6 +488,8 @@ namespace API.Migrations
             modelBuilder.Entity("API.Entities.General.Employee", b =>
                 {
                     b.Navigation("Feedbacks");
+
+                    b.Navigation("JobOpenings");
                 });
 
             modelBuilder.Entity("API.Entities.General.InterviewRound", b =>

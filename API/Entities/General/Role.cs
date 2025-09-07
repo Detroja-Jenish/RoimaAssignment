@@ -7,6 +7,7 @@ namespace API.Entities.General;
 [PrimaryKey("RoleID")]
 public class Role
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int RoleID { get; set; }
     [Column(TypeName = "varchar(20)")]
     public string RoleTitle { get; set; } = null!;

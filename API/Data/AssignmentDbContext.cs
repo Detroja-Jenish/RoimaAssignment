@@ -3,7 +3,7 @@ using API.Entities.General;
 using Microsoft.EntityFrameworkCore;
 namespace API.Data;
 
-public class AssignmentDataContext : DbContext
+public class AssignmentDbContext : DbContext
 {
     private string connectionString;
 
@@ -17,7 +17,7 @@ public class AssignmentDataContext : DbContext
     public DbSet<CandidateWiseSkill> CandidateWiseSkills { get; set; }
     public DbSet<Skill> Skills { get; set; }
     public DbSet<JobOpeningWiseSkill> JobOpeningWiseSkills { get; set; }
-    public AssignmentDataContext(IConfiguration _config)
+    public AssignmentDbContext(IConfiguration _config)
     {
         connectionString = _config.GetConnectionString("MYSQL_CONNECTION_STRING");
     }
@@ -76,6 +76,13 @@ public class AssignmentDataContext : DbContext
                     .WithOne(feedback => feedback.Employee)
                     .HasForeignKey(feedback => feedback.InterviewerID)
                     .HasPrincipalKey(emp => emp.EmployeeID);
+        
+        //Employee -> JobOpening
+        modelBuilder.Entity<Employee>()
+                    .HasMany<JobOpening>(emp => emp.JobOpenings)
+                    .WithOne(jobOpening => jobOpening.CreatedByEmployee)
+                    .HasForeignKey(jobOpening => jobOpening.CreatedBy)
+                    .HasPrincipalKey(emp => emp.EmployeeID);
 
         //InterviewRound -> CandidateWiseInterview
         modelBuilder.Entity<InterviewRound>()
@@ -94,5 +101,6 @@ public class AssignmentDataContext : DbContext
         modelBuilder.Entity<JobOpening>()
                     .Property(m => m.Status)
                     .HasConversion<string>();
+
     }
 }

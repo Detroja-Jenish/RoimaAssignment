@@ -8,6 +8,7 @@ namespace API.Entities.General;
 
 public class Candidate
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int CandidateID { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }

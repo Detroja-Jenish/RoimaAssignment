@@ -7,6 +7,7 @@ namespace API.Entities.General;
 [PrimaryKey("InterviewRoundID")]
 public class InterviewRound
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int InterviewRoundID { get; set; }
     public string InterviewMode { get; set; }
     public string InterviewDescription { get; set; }
