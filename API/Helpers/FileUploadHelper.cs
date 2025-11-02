@@ -4,9 +4,9 @@ using System;
 using System.IO;
 public class FileUploadHelper
 {
-    public static string SaveFile(IFormFile imageFile, string dir)
+    public static async Task<string> SaveFile(IFormFile imageFile, string dir)
     {
-        string finalDirPath = $"wwwroot/{dir}";
+        string finalDirPath = $"uploads/{dir}";
         if (imageFile == null || imageFile.Length == 0)
         {
             throw new Exception();
@@ -20,10 +20,10 @@ public class FileUploadHelper
         string fileExtension = Path.GetExtension(imageFile.FileName);
 
         //genrate unique file name
-        string uniqueNameForFile = $"{Guid.NewGuid()}.{fileExtension}";
+        string uniqueNameForFile = $"{Guid.NewGuid().ToString()}.{fileExtension}";
 
         //get full path which we will store in db ( we dont need to store from wwwroot)
-        string fullPathToStoreInDB = $"{dir}/{uniqueNameForFile}";
+        string fullPathToStoreInDB = $"{uniqueNameForFile}";
 
         //get path where we store image means wwwroot
         string fullPathToWrite = $"{finalDirPath}/{uniqueNameForFile}";
@@ -31,7 +31,7 @@ public class FileUploadHelper
 
         // use stream to manipulate or save image in disk
         FileStream stream = new FileStream(fullPathToWrite, FileMode.CreateNew);
-        imageFile.CopyTo(stream);
+        await imageFile.CopyToAsync(stream);
         stream.Close();
 
         //retrurn path which we will store in db
