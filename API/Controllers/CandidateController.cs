@@ -44,7 +44,7 @@ namespace API.Controllers
         //     return Ok(candidate);
         // }
 
-        // POST: api/candidates (Insert)
+        
         [HttpPost]
         public async Task<IActionResult> CreateCandidate([FromForm] InsertUpdateCandidateModel model)
         {
