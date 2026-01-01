@@ -4,6 +4,7 @@ using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(AssignmentDbContext))]
-    partial class AssignmentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260101142456_RemoveInterviewDescriptionFromCandidateWiseInterview")]
+    partial class RemoveInterviewDescriptionFromCandidateWiseInterview
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -100,6 +103,7 @@ namespace API.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("MeetingLink")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("InterviewID");
@@ -216,6 +220,7 @@ namespace API.Migrations
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Feedback")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<int>("InterviewID")

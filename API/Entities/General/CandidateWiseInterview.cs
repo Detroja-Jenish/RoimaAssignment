@@ -10,9 +10,8 @@ public class CandidateWiseInterview
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int InterviewID { get; set; }
     public DateTime InterviewDate { get; set; }
-    public string InterviewDescription { get; set; }
-    public TimeSpan InterviewTime { get; set; }
-    public string MeetingLink { get; set; }
+    public DateTime InterviewTime { get; set; }
+    public string? MeetingLink { get; set; }
     public int InterviewRoundID { get; set; }
     public int CandidateID { get; set; }
 

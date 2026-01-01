@@ -1,3 +1,11 @@
+using API.Data;
+using API.Entities.General;
+using API.Interfaces;
+using API.Models;
+using Microsoft.EntityFrameworkCore;
+using Praticse.Helpers;
+namespace API.Repositories;
+
 public class CandidateRepository : ICandidateRepository
 {
     private readonly AssignmentDbContext _context;
@@ -82,14 +90,5 @@ public class CandidateRepository : ICandidateRepository
         _context.Candidates.Update(candidate);
         await _context.SaveChangesAsync();
     }
-    public async Task<IEnumerable<Candidate>> GetByJobOpeningAsync(int jobOpeningId)
-    {
-        return await _context.Candidates
-        .Where(c => c.AppliedJobOpeningId == jobOpeningId)
-        .Include(c => c.AppliedJobOpening)
-        .ToListAsync();
-    }
 
-
-    
 }
