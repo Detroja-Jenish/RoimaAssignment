@@ -17,6 +17,9 @@ public class AssignmentDbContext : DbContext
     public DbSet<CandidateWiseSkill> CandidateWiseSkills { get; set; }
     public DbSet<Skill> Skills { get; set; }
     public DbSet<JobOpeningWiseSkill> JobOpeningWiseSkills { get; set; }
+    public DbSet<CandidateWiseReviewer> CandidateWiseReviewers { get; set; }
+
+
     public AssignmentDbContext(IConfiguration _config)
     {
         connectionString = _config.GetConnectionString("MYSQL_CONNECTION_STRING");
@@ -76,7 +79,7 @@ public class AssignmentDbContext : DbContext
                     .WithOne(feedback => feedback.Employee)
                     .HasForeignKey(feedback => feedback.InterviewerID)
                     .HasPrincipalKey(emp => emp.EmployeeID);
-        
+
         //Employee -> JobOpening
         modelBuilder.Entity<Employee>()
                     .HasMany<JobOpening>(emp => emp.JobOpenings)
@@ -101,6 +104,14 @@ public class AssignmentDbContext : DbContext
         modelBuilder.Entity<JobOpening>()
                     .Property(m => m.Status)
                     .HasConversion<string>();
+        modelBuilder.Entity<CandidateWiseReviewer>()
+.HasOne(cwr => cwr.Candidate)
+.WithMany(c => c.CandidateWiseReviewers)
+.HasForeignKey(cwr => cwr.CandidateID);
+        modelBuilder.Entity<CandidateWiseReviewer>()
+        .HasOne(cwr => cwr.Reviewer)
+        .WithMany(e => e.CandidateWiseReviewers)
+        .HasForeignKey(cwr => cwr.ReviewerID);
 
     }
 }

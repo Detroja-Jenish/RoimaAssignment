@@ -45,6 +45,18 @@ public class InterviewController : ControllerBase
             Message = "Interview scheduled and interviewers assigned"
         });
     }
+    [HttpPut("submit-feedback")]
+    public async Task<IActionResult> SubmitFeedback(SubmitFeedbackDto dto)
+    {
+        var result = await _interviewRepository.SubmitFeedbackAsync(dto);
+
+        if (!result)
+        {
+            return NotFound(new { Message = "Interview assignment not found for this interviewer." });
+        }
+
+        return Ok(new { Message = "Feedback submitted successfully." });
+    }
 
 
 }

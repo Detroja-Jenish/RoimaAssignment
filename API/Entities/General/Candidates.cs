@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using API.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Entities.General;
@@ -22,8 +23,10 @@ public class Candidate
     public DateTime ModifiedAt { get; set; }
     public int AppliedJobOpeningId { get; set; }
     public string CVPath { get; set; }
-
+    public CandidateStatus Status { get; set; } = CandidateStatus.Applied;
+    public string? StatusComment { get; set; }
     public JobOpening AppliedJobOpening { get; set; }
     public ICollection<CandidateWiseInterview> CandidateWiseInterviews { get; set; }
     public ICollection<CandidateWiseSkill> CandidateWiseSkills { get; set; }
+    public ICollection<CandidateWiseReviewer> CandidateWiseReviewers { get; set; }
 }

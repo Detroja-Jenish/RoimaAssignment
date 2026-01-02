@@ -1,4 +1,5 @@
 using API.Entities.General;
+using API.Models;
 namespace API.Interfaces;
 
 public interface IInterviewRepository
@@ -9,5 +10,6 @@ public interface IInterviewRepository
         int candidateWiseInterviewId,
         List<int> interviewerIds
     );
+    Task<bool> SubmitFeedbackAsync(SubmitFeedbackDto dto);
 
 }

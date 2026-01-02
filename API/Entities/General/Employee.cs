@@ -25,4 +25,8 @@ public class Employee
     public Role Role { get; set; }
     public ICollection<InterviewWiseAuthorityFeedback> Feedbacks { get; set; }
     public ICollection<JobOpening> JobOpenings { get; set; }
+    public ICollection<CandidateWiseReviewer> Reviews { get; set; }
+    public ICollection<CandidateWiseReviewer> CandidateWiseReviewers { get; set; }
+
+
 }
