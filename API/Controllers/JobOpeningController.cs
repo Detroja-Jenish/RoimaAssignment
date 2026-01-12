@@ -59,26 +59,34 @@ namespace Api.Controllers
             }
 
             await _context.SaveChangesAsync();
+            var jobWithSkills = await _context.JobOpenings
+        .Include(j => j.JobOpeningWiseSkills)
+        .ThenInclude(js => js.Skill)
+        .FirstOrDefaultAsync(j => j.JobOpeningID == jobOpening.JobOpeningID);
+
+            if (jobWithSkills == null) return Json(new { error = "Failed to retrieve saved job" });
+
             JobOpeningResponseModel response = new JobOpeningResponseModel
             {
-                JobOpeningId = jobOpening.JobOpeningID,
-                Title = jobOpening.Title,
-                Description = jobOpening.Description,
-                RequiredMinExperience = jobOpening.RequiredMinExperience,
-                LastDateOFRegistration = jobOpening.LastDateOFRegistration,
-                Status = JobOpeningStatus.Start,
-                NoOfOpenings = model.NoOfOpenings,
-                CreatedBy = model.CreatedBy,
-                Skills = jobOpeningWiseSkills.Select(
+                JobOpeningId = jobWithSkills.JobOpeningID,
+                Title = jobWithSkills.Title,
+                Description = jobWithSkills.Description,
+                RequiredMinExperience = jobWithSkills.RequiredMinExperience,
+                LastDateOFRegistration = jobWithSkills.LastDateOFRegistration,
+                Status = jobWithSkills.Status,
+                NoOfOpenings = jobWithSkills.NoOfOpenings,
+                CreatedBy = jobWithSkills.CreatedBy,
+                Skills = jobWithSkills.JobOpeningWiseSkills.Select(
                     js => new JobOpeningWiseSkillResponseModel
                     {
                         SkillID = js.SkillID,
-                        SkillTitle = js.Skill.SkillTitle,
-                        Description = js.Skill.Description,
+                        SkillTitle = js.Skill?.SkillTitle ?? "N/A", // Safe access
+                        Description = js.Skill?.Description ?? "",
                         Importance = js.Importance
                     }
                 ).ToList()
             };
+
             return Json(new { jobOpening = response });
         }
 
